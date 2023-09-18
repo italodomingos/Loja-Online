@@ -1,0 +1,12 @@
+.navSize {
+  width: 280px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+a[actived] {
+  color: #212b36 !important;
+}

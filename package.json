@@ -1,0 +1,13 @@
+{
+  "name": "loja-online",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd ./loja-baterias/ && npm start",
+    "backend": "node ./loja-baterias/src/routes/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

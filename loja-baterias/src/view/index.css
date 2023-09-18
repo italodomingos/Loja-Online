@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body #root .App {
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.bg-red {
+  background-color: #eb3334 !important;
+  color: white !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+.textYellow {
+  color: #f3ec34 !important;
+}
+
+.clickable {
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+  color: inherit;
+}
+
+.clickable:hover {
+  color: rgb(180, 180, 180);
+}
+
+.px-9 {
+  padding-left: 9em !important;
+  padding-right: 9em !important;
+}
+
+.fs-08 {
+  font-size: 0.8em;
+}
+.fs-custom {
+  font-size: 2em;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+}
+.show img {
+  opacity: 0.2;
+}
+.dropdown-toggle:after {
+  display: none !important;
+}
+
+a,
+button {
+  transition: 0.5s !important;
+  border: none;
+  background-color: inherit;
+}
+
+.middle-input {
+  top: 0;
+  left: 90%;
+}
+.middle-input i {
+  background-color: white;
+}

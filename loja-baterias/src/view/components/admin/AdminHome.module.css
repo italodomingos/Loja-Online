@@ -1,0 +1,10 @@
+.hFull {
+  height: 100vh;
+}
+
+.font {
+  font-family: Public Sans, sans-serif;
+  color: #212b36;
+  font-weight: 600;
+  font-size: 0.875em;
+}

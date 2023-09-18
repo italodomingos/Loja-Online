@@ -1,0 +1,7 @@
+.textYellow div div a {
+  transition: 0.5s;
+  color: #f3ec34 !important;
+}
+.textYellow div div a:hover {
+  background-color: rgb(253, 100, 100);
+}

@@ -1,0 +1,107 @@
+/* Reset de estilos padrão do navegador */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+section.destaques {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.produto {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  width: 300px;
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-size: 20px;
+  color: #00aaff;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0088cc;
+}
+
+section.informacoes {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
