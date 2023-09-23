@@ -8,6 +8,7 @@ const {
   createUser,
   updateUser,
   login,
+  searchUser,
 } = require("../controllers/UserController");
 const {
   listUserTypes,
@@ -51,7 +52,8 @@ router.get("/user/:id", getUser);
 router.delete("/user/:id", deleteUser);
 router.post("/user", createUser);
 router.put("/user/:id", updateUser);
-router.post("user/login", login);
+router.post("/user/login", login);
+router.post("/user/search", searchUser);
 
 //UserTypes
 router.get("/userType", listUserTypes);

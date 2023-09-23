@@ -3,6 +3,7 @@ const UserType = require("../models/UserType");
 const setRangeHeader = require("../util/util");
 const CryptController = require("./CryptController");
 const TokenController = require("./TokenController");
+const { Op } = require("sequelize");
 
 async function listUsers(req, res) {
   try {
@@ -27,18 +28,37 @@ async function getUser(req, res) {
   }
 }
 
+async function searchUser(req, res) {
+  try {
+    const users = await User.findAll({
+      include: UserType,
+      where: {
+        [Op.or]: [
+          { name: { [Op.like]: `%${req.body.text}%` } },
+          { email: { [Op.like]: `%${req.body.text}%` } },
+        ],
+      },
+    });
+
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ Error: "Erro ao buscar usuário" });
+  }
+}
+
 async function createUser(req, res) {
   try {
     await emailNotExist(req.body.email)
       .then(async () => {
-        const userType = await UserType.findByPk(req.body.UserTypeId);
         req.body.password = await CryptController.crypt(req.body.password);
 
         const user = await User.create(req.body, { include: UserType });
-        user.addUserType(userType);
+        // user.addUserType(userType);
         res.json(user);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log(err);
         res.status(400).json({ message: "Email já cadastrado" });
       });
   } catch (error) {
@@ -125,4 +145,5 @@ module.exports = {
   updateUser,
   login,
   logout,
+  searchUser,
 };

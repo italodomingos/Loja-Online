@@ -6,11 +6,12 @@ import Login from "./components/login/Login";
 import Register from "./components/pages/Register";
 // import { useState } from "react";
 import AdminHome from "./components/admin/AdminHome";
-import AdminProducts from "./components/admin/pages/products/AdminProducts";
+import AdminProduct from "./components/admin/pages/products/AdminProduct";
 import NotFound from "./components/pages/NotFound";
 import AdminUserCreate from "./components/admin/pages/users/AdminUserCreate";
 import AdminUser from "./components/admin/pages/users/AdminUser";
 import AdminUserUpdate from "./components/admin/pages/users/AdminUserUpdate";
+import AdminProductCreate from "./components/admin/pages/products/AdminProductCreate";
 
 function App() {
   // const [user, setUser] = useState();
@@ -26,7 +27,9 @@ function App() {
           <Route path="/admin/user" Component={AdminUser} />
           <Route path="/admin/user/create" Component={AdminUserCreate} />
           <Route path="/admin/user/:id" Component={AdminUserUpdate} />
-          <Route path="/admin/product" Component={AdminProducts} />
+          <Route path="/admin/product" Component={AdminProduct} />
+          <Route path="/admin/product/create" Component={AdminProductCreate} />
+
           <Route path="*" Component={NotFound} />
         </Routes>
       </Router>

@@ -42,7 +42,7 @@ code {
   font-size: 0.8em;
 }
 .fs-custom {
-  font-size: 2em;
+  font-size: 1.2em;
 }
 .icon {
   height: 50px;
@@ -62,10 +62,6 @@ button {
   background-color: inherit;
 }
 
-.middle-input {
-  top: 0;
-  left: 90%;
-}
-.middle-input i {
+/* .middle-input i {
   background-color: white;
-}
+} */

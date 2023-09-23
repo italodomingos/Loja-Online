@@ -13,7 +13,7 @@ const useListTypes = (name) => {
       .then((response) => {
         const options = response.data.map((value) => {
           return (
-            <option key={value.id} value={value.id} name="UserType">
+            <option key={value.id} value={value.id} name={value.id}>
               {value.description}
             </option>
           );

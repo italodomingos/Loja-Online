@@ -3,7 +3,7 @@ import AdminHome from "../../AdminHome";
 import AdminList from "../../list/AdminList";
 import axios from "axios";
 
-export default function AdminProducts() {
+export default function AdminProduct() {
   const [rows, setRows] = useState([]);
 
   const columns = [
